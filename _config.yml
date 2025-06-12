@@ -12,12 +12,10 @@ title: Saugat Ojha's Portfolio # This is what shows up in the tab of the browser
 
 
 # Hero Section
-name: 
-headline: headline message
+name: Saugat Ojha
+headline: Mechanical Engineer
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi! I am Saugat Ojha, Mechanical Engineer interested in renewable and sustainable energy systems.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
