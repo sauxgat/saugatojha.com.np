@@ -62,10 +62,10 @@ Italicized text is the *cat's meow*.
 4. Plot the graph using Matplotlib library.
 <!--
       Adding unordered list
-    - First item
-    - Second item
-    - Third item
-    - Fourth item -->
+    First item
+    Second item
+    Third item
+    Fourth item -->
 
 # Python Code Used :
 ```python
