@@ -60,7 +60,8 @@ Italicized text is the *cat's meow*.
 2. Define your inputs.
 3. Calculate the values of Pressure and Volume for each state point.
 4. Plot the graph using Matplotlib library.
-<!-- Adding unordered list
+<!-- 
+Adding unordered list
 - First item
 - Second item
 - Third item
@@ -72,7 +73,7 @@ import math
 import matplotlib.pyplot as plt
 gamma = 1.4
 num_value = 50
-engine kinematics function
+#engine kinematics function
 def engine_parameters(bore,stroke,con_rod,cr,start_crank,end_crank,v_s,v_c):
     a = stroke/2
     R = con_rod/a
@@ -88,7 +89,7 @@ def engine_parameters(bore,stroke,con_rod,cr,start_crank,end_crank,v_s,v_c):
         term3 = pow(term3,0.5)
         V.append((1+term1*(term2-term3))*v_c)
     return V
-graph function
+#graph function
 def graph_plot():
     plt.figure(1)
     plt.plot(V_compression,P_compression,label='Adiabatic Compression')
@@ -101,7 +102,7 @@ def graph_plot():
     plt.title('Otto Cycle PV Diagram')
     plt.savefig('otto_cycle_pv_diagram.png')
     plt.show()
-Define Inputs 
+#Define Inputs 
 p1 = float(input("Type the value for P1: (Pa) \t"))  
 t1 = float(input("Type the value for T1: (K) \t"))
 t3 = float(input("Type the value for T3: (K) \t"))
@@ -114,15 +115,15 @@ v_s = (math.pi/4)*pow(bore,2)*stroke
 v_c=v_s/(cr-1)
 v1=v_s+v_c
 v2=v_c
-calculate state point 2
+#calculate state point 2
 p2 = p1*pow(v1,gamma)/pow(v2,gamma)
 rhs =p1 *v1/t1
 t2 =p2*v2/rhs
-compression process
+#compression process
 V_compression =engine_parameters(bore,stroke,con_rod,cr,180,0,v_s,v_c)
 constant =p1*pow(v1,gamma)
 P_compression=[constant/pow(v,gamma) for v in V_compression]
-#step 7 calculate state point 3
+#calculate state point 3
 v3=v2
 rhs=p2*v2/t2
 p3=rhs*t3/v3
@@ -130,7 +131,7 @@ expansion process
 V_expansion=engine_parameters(bore,stroke,con_rod,cr,0,180,v_s,v_c)
 constant =p3*pow(v3,gamma)
 P_expansion =[constant/pow(v,gamma) for v in V_expansion]
-state point 4
+#state point 4
 v4 = v1
 p4 =p3*pow(v3,gamma)/pow(v4,gamma)
 rhs=p3*v3/t3
