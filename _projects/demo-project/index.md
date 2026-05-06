@@ -8,7 +8,7 @@ skills:
   - Data Structures
   - IC Engines Working Principles
 
-main-image: /project2.jpg
+main-image: /project2.png
 ---
 
 ---
